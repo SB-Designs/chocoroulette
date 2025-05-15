@@ -824,7 +824,26 @@
             function l() {
                var n = a.fullScreen || a.mozFullScreen || a.webkitIsFullScreen || a.msFullscreenElement || !!a.webkitFullscreenElement;
                e(t).attr("style", n ? "display: none !important;" : "")
-            },
+            }
+
+            function d() {
+               var e = o.children(".w-webflow-badge"),
+                  n = e.length && e.get(0) === t,
+                  a = i.env("editor");
+               if (n) {
+                  a && e.remove();
+                  return
+               }
+               e.length && e.remove(), a || o.append(t)
+            }
+            return n.ready = function () {
+               var n, i, o, f = r.attr("data-wf-status"),
+                  p = r.attr("data-wf-domain") || "";
+               /\.webflow\.io$/i.test(p) && c.hostname !== p && (f = !0), f && !s && (t = t || (n = e('<a class="w-webflow-badge"></a>').attr("href", "https://webflow.com?utm_campaign=brandjs"), i = e("<img>").attr("src", "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg").attr("alt", "").css({
+                  marginRight: "4px",
+                  width: "26px"
+               }), o = e("<img>").attr("src", "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg").attr("alt", "Made in Webflow"), n.append(i, o), n[0]), d(), setTimeout(d, 500), e(a).off(u, l).on(u, l))
+            }, n
          })
       },
       322: function (e, t, n) {
