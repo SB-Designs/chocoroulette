@@ -839,10 +839,10 @@
             return n.ready = function () {
                var n, i, o, f = r.attr("data-wf-status"),
                   p = r.attr("data-wf-domain") || "";
-               /\.webflow\.io$/i.test(p) && c.hostname !== p && (f = !0), f && !s && (t = t || (n = e('<a class="w-webflow-badge"></a>').attr("href", "https://webflow.com?utm_campaign=brandjs"), i = e("<img>").attr("src", "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg").attr("alt", "").css({
+               /\.webflow\.io$/i.test(p) && c.hostname !== p && (f = !0), f && !s && (t = t || (n = e().attr(), i = e().attr().attr("alt", "").css({
                   marginRight: "4px",
                   width: "26px"
-               }), o = e("<img>").attr("src", "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg").attr("alt", "Made in Webflow"), n.append(i, o), n[0]), d(), setTimeout(d, 500), e(a).off(u, l).on(u, l))
+               }), o = e().attr().attr(), n.append(i, o), n[0]), d(), setTimeout(d, 500), e(a).off(u, l).on(u, l))
             }, n
          })
       },
