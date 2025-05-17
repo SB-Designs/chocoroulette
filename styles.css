@@ -5235,8 +5235,16 @@ figcaption {
 
   .header.padding-section-small {
     background-color: var(--background-color--background-alternate);
+    color: var(--link-color--link-secondary);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .header-wrapper {
+    color: var(--link-color--link-alternate);
   }
 
   .section-assets.padding-section-small {
@@ -5543,6 +5551,14 @@ figcaption {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .header.padding-section-small {
+    background-color: var(--text-color--text-white-60);
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(#fff0, #fff0);
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   .social-main-img-wrap {
